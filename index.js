@@ -4,8 +4,6 @@ const morgan = require('morgan');
 const cors = require('cors');
 const app = express();
 const dotenv = require('dotenv').config();
-const NAVER_ID = process.env.NAVER_ID; //env = 환경 변수
-const NAVER_SECRET_ID = process.env.NAVER_SECRET_ID;
 
 app.set('port', process.env.PORT || 8099);
 const port = app.get('port');
@@ -35,8 +33,8 @@ app.post('/papago', (req, res) => {
       text: txt, //post로 보낸 데이터는 바디의 텍스트로 넘겨준다.
     },
     headers: {
-      'X-Naver-Client-Id': NAVER_ID,
-      'X-Naver-Client-Secret': NAVER_SECRET_ID,
+      'X-Naver-Client-Id': '1bj5lUJ102ROHYMrRXwl',
+      'X-Naver-Client-Secret': '9qpiOmtN8U',
       'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
     },
   })
