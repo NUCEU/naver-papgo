@@ -35,8 +35,8 @@ app.post('/papago', (req, res) => {
       text: txt, //post로 보낸 데이터는 바디의 텍스트로 넘겨준다.
     },
     headers: {
-      'X-Naver-Client-Id': 'NAVER_ID',
-      'X-Naver-Client-Secret': 'NAVER_SECRET_ID',
+      'X-Naver-Client-Id': NAVER_ID,
+      'X-Naver-Client-Secret': NAVER_SECRET_ID,
       'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
     },
   })
